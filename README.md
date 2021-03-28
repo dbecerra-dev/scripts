@@ -1,1 +1,1 @@
-Several scripts mainly for intial configurations in LAMMPS are provided
+Several scripts mainly for initial configurations in LAMMPS are provided
