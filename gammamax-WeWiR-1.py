@@ -359,7 +359,7 @@ fit1y = (gammamax3e, gammamax3f)
 #gammamax=cWR^d
 g=2
 h=0.33
-WR4g=0.00001
+WR4g=1
 WR4h=10000
 gammamax4g=g*WR4g**h
 gammamax4h=g*WR4h**h
@@ -374,21 +374,97 @@ powerlaw = lambda x, amp, index: amp * (x**index)
 loga1 = np.log(a1)
 logb1 = np.log(b1)
 
-def model(x, a, b):
-   return a + b * x
+def model(x, a):
+   return a + 0.33 * x
 
-pars, cov = curve_fit(f=model, xdata=loga1, ydata=logb1, p0=[0, 0], bounds=(-np.inf, np.inf))
+pars, cov = curve_fit(f=model, xdata=loga1, ydata=logb1, p0=[0], bounds=(-np.inf, np.inf))
 
 stdevs1 = np.sqrt(np.diag(cov))
 
 amp1 = np.exp(pars[0])
-index1 = pars[1]
 
 print 'Linearizing data for beta=5 Nk=244'
-print 'prefactor=',amp1,', exponent=', index1
-print 'stdevs prefactor=',np.exp(stdevs1[0]),', stdevs exponent=',stdevs1[1]
-tauRtauK1=np.exp((np.log(amp1)-np.log(2))/index1)
+print 'prefactor=',amp1
+print 'stdevs prefactor=',np.exp(stdevs1[0])
+tauRtauK1=np.exp((np.log(amp1)-np.log(2))/0.33)
 print tauRtauK1
+#################################################################################################
+#################################################################################################
+loga2 = np.log(a2)
+logb2 = np.log(b2)
+
+def model(x, a):
+   return a + 0.33 * x
+
+pars, cov = curve_fit(f=model, xdata=loga2, ydata=logb2, p0=[0], bounds=(-np.inf, np.inf))
+
+stdevs2 = np.sqrt(np.diag(cov))
+
+amp2 = np.exp(pars[0])
+
+print 'Linearizing data for beta=5 Nk=350'
+print 'prefactor=',amp2
+print 'stdevs prefactor=',np.exp(stdevs2[0])
+tauRtauK2=np.exp((np.log(amp2)-np.log(2))/0.33)
+print tauRtauK2
+#################################################################################################
+#################################################################################################
+loga3 = np.log(a3)
+logb3 = np.log(b3)
+
+def model(x, a):
+   return a + 0.33 * x
+
+pars, cov = curve_fit(f=model, xdata=loga3, ydata=logb3, p0=[0], bounds=(-np.inf, np.inf))
+
+stdevs3 = np.sqrt(np.diag(cov))
+
+amp3 = np.exp(pars[0])
+
+print 'Linearizing data for beta=5 Nk=512'
+print 'prefactor=',amp3
+print 'stdevs prefactor=',np.exp(stdevs3[0])
+tauRtauK3=np.exp((np.log(amp3)-np.log(2))/0.33)
+print tauRtauK3
+#################################################################################################
+
+#################################################################################################
+loga4 = np.log(a4)
+logb4 = np.log(b4)
+
+def model(x, a):
+   return a + 0.33 * x
+
+pars, cov = curve_fit(f=model, xdata=loga4, ydata=logb4, p0=[0], bounds=(-np.inf, np.inf))
+
+stdevs4 = np.sqrt(np.diag(cov))
+
+amp4 = np.exp(pars[0])
+
+print 'Linearizing data for beta=5 Nk=848'
+print 'prefactor=',amp4
+print 'stdevs prefactor=',np.exp(stdevs4[0])
+tauRtauK4=np.exp((np.log(amp4)-np.log(2))/0.33)
+print tauRtauK4
+#################################################################################################
+#################################################################################################
+loga5 = np.log(a5)
+logb5 = np.log(b5)
+
+def model(x, a):
+   return a + 0.33 * x
+
+pars, cov = curve_fit(f=model, xdata=loga5, ydata=logb5, p0=[0], bounds=(-np.inf, np.inf))
+
+stdevs5 = np.sqrt(np.diag(cov))
+
+amp5 = np.exp(pars[0])
+
+print 'Linearizing data for beta=5 Nk=1500'
+print 'prefactor=',amp5
+print 'stdevs prefactor=',np.exp(stdevs5[0])
+tauRtauK5=np.exp((np.log(amp5)-np.log(2))/0.33)
+print tauRtauK5
 #################################################################################################
 
 def multiply_list(a,b):
@@ -411,10 +487,15 @@ ax.plot(fit2x, fit2y,color='k',label=r'',ls='--', linewidth=3)
 
 multiply_list(a1,tauRtauK1)
 ax.scatter(a1, b1,color='none',label=r'$N_{\rm K}=244, \tau_{\rm R}/\tau_{\rm K}=%7.3f$' % (tauRtauK1) , marker='^', edgecolor='#FA8072', linewidth='4', s=1200)
-# ax.scatter(a2, b2,color='none',label=r'$N_{\rm K}=350$', marker='o', edgecolor='#FA8072', linewidth='4', s=1200)
-# ax.scatter(a3, b3,color='none',label=r'$N_{\rm K}=512$', marker='s', edgecolor='#FA8072', linewidth='4', s=1200)
-# ax.scatter(a4, b4,color='none',label=r'$N_{\rm K}=848$', marker='p', edgecolor='#FA8072', linewidth='4', s=1200)
-# ax.scatter(a5, b5,color='none',label=r'$N_{\rm K}=1500$', marker='v', edgecolor='#FA8072', linewidth='4', s=1200)
+multiply_list(a2,tauRtauK2)
+ax.scatter(a2, b2,color='none',label=r'$N_{\rm K}=350, \tau_{\rm R}/\tau_{\rm K}=%7.3f$' % (tauRtauK2) , marker='o', edgecolor='#FA8072', linewidth='4', s=1200)
+multiply_list(a3,tauRtauK3)
+ax.scatter(a3, b3,color='none',label=r'$N_{\rm K}=512, \tau_{\rm R}/\tau_{\rm K}=%7.3f$' % (tauRtauK3) , marker='s', edgecolor='#FA8072', linewidth='4', s=1200)
+multiply_list(a4,tauRtauK4)
+ax.scatter(a4, b4,color='none',label=r'$N_{\rm K}=848, \tau_{\rm R}/\tau_{\rm K}=%7.3f$' % (tauRtauK4) , marker='p', edgecolor='#FA8072', linewidth='4', s=1200)
+multiply_list(a5,tauRtauK5)
+ax.scatter(a5, b5,color='none',label=r'$N_{\rm K}=1500, \tau_{\rm R}/\tau_{\rm K}=%7.3f$' % (tauRtauK5) , marker='v', edgecolor='#FA8072', linewidth='4', s=1200)
+
 
 plt.xlabel(r'$\dot{\gamma}\tau_{\rm K}$',fontsize=90)
 plt.ylabel(r'$\gamma_{\rm max}$',fontsize=90)
@@ -433,10 +514,10 @@ plt.legend()
 chartBox = ax.get_position()
 ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.8, chartBox.height])
 #ax.legend(loc='lower right', bbox_to_anchor=(1.15, 0), shadow=True, ncol=1, prop={'size': 60})
-ax.legend(loc='lower right', bbox_to_anchor=(1.1, 0), shadow=True, ncol=1, prop={'size': 70})
+ax.legend(loc='lower right', bbox_to_anchor=(1.0, 0), shadow=True, ncol=1, prop={'size': 50})
 
 textstr1 = '\n'.join((r'$\angle 0.33$',))
-plt.text(0.8, 0.85, textstr1, transform=ax.transAxes, fontsize=60, verticalalignment='top')
+plt.text(0.87, 0.85, textstr1, transform=ax.transAxes, fontsize=70, verticalalignment='top')
 
 textstr2 = '\n'.join((r'$\beta=5$',))
 plt.text(0.07, 0.95, textstr2, transform=ax.transAxes, fontsize=80, verticalalignment='top', color='k')
