@@ -30,7 +30,7 @@ with open('./data/data-beta5-NK244-gammatauk','r') as csvfile:
             a1.append(float(row[1]))
             b1.append(float(row[5]))
             a1a.append(float(row[1])*beta5nk244)
-            b1err.append(float(row[5])*0.08)
+            b1err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a2=[]
 b2=[]
@@ -45,7 +45,7 @@ with open('./data/data-beta5-NK350-gammatauk','r') as csvfile:
             a2.append(float(row[1]))
             b2.append(float(row[5]))
             a2a.append(float(row[1])*beta5nk350)
-            b2err.append(float(row[5])*0.08)
+            b2err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a3=[]
 b3=[]
@@ -60,7 +60,7 @@ with open('./data/data-beta5-NK512-gammatauk','r') as csvfile:
             a3.append(float(row[1]))
             b3.append(float(row[5]))
             a3a.append(float(row[1])*beta5nk512)
-            b3err.append(float(row[5])*0.08)
+            b3err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a4=[]
 b4=[]
@@ -75,7 +75,7 @@ with open('./data/data-beta5-NK848-gammatauk','r') as csvfile:
             a4.append(float(row[1]))
             b4.append(float(row[5]))
             a4a.append(float(row[1])*beta5nk848)
-            b4err.append(float(row[5])*0.08)
+            b4err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a5=[]
 b5=[]
@@ -90,7 +90,7 @@ with open('./data/data-beta5-NK1500-gammatauk','r') as csvfile:
             a5.append(float(row[1]))
             b5.append(float(row[5]))
             a5a.append(float(row[1])*beta5nk1500)
-            b5err.append(float(row[5])*0.08)
+            b5err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a6=[]
 b6=[]
@@ -105,7 +105,7 @@ with open('./data/data-beta9-NK244-gammatauk','r') as csvfile:
             a6.append(float(row[1]))
             b6.append(float(row[5]))
             a6a.append(float(row[1])*beta9nk244)
-            b6err.append(float(row[5])*0.08)
+            b6err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a7=[]
 b7=[]
@@ -120,7 +120,7 @@ with open('./data/data-beta9-NK350-gammatauk','r') as csvfile:
             a7.append(float(row[1]))
             b7.append(float(row[5]))
             a7a.append(float(row[1])*beta9nk350)
-            b7err.append(float(row[5])*0.08)
+            b7err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a8=[]
 b8=[]
@@ -135,7 +135,7 @@ with open('./data/data-beta9-NK512-gammatauk','r') as csvfile:
             a8.append(float(row[1]))
             b8.append(float(row[5]))
             a8a.append(float(row[1])*beta9nk512)
-            b8err.append(float(row[5])*0.08)
+            b8err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a9=[]
 b9=[]
@@ -150,7 +150,7 @@ with open('./data/data-beta9-NK848-gammatauk','r') as csvfile:
             a9.append(float(row[1]))
             b9.append(float(row[5]))
             a9a.append(float(row[1])*beta9nk848)
-            b9err.append(float(row[5])*0.08)
+            b9err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a10=[]
 b10=[]
@@ -165,7 +165,7 @@ with open('./data/data-beta9-NK1500-gammatauk','r') as csvfile:
             a10.append(float(row[1]))
             b10.append(float(row[5]))
             a10a.append(float(row[1])*beta9nk1500)
-            b10err.append(float(row[5])*0.08)
+            b10err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a11=[]
 b11=[]
@@ -180,7 +180,7 @@ with open('./data/data-beta14-NK244-gammatauk','r') as csvfile:
             a11.append(float(row[1]))
             b11.append(float(row[5]))
             a11a.append(float(row[1])*beta14nk244)
-            b11err.append(float(row[5])*0.08)
+            b11err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a12=[]
 b12=[]
@@ -195,7 +195,7 @@ with open('./data/data-beta14-NK350-gammatauk','r') as csvfile:
             a12.append(float(row[1]))
             b12.append(float(row[5]))
             a12a.append(float(row[1])*beta14nk350)
-            b12err.append(float(row[5])*0.08)
+            b12err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a13=[]
 b13=[]
@@ -210,7 +210,7 @@ with open('./data/data-beta14-NK512-gammatauk','r') as csvfile:
             a13.append(float(row[1]))
             b13.append(float(row[5]))
             a13a.append(float(row[1])*beta14nk512)
-            b13err.append(float(row[5])*0.08)
+            b13err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a14=[]
 b14=[]
@@ -225,7 +225,7 @@ with open('./data/data-beta14-NK848-gammatauk','r') as csvfile:
             a14.append(float(row[1]))
             b14.append(float(row[5]))
             a14a.append(float(row[1])*beta14nk848)
-            b14err.append(float(row[5])*0.08)
+            b14err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a15=[]
 b15=[]
@@ -240,7 +240,7 @@ with open('./data/data-beta14-NK1500-gammatauk','r') as csvfile:
             a15.append(float(row[1]))
             b15.append(float(row[5]))
             a15a.append(float(row[1])*beta14nk1500)
-            b15err.append(float(row[5])*0.08)
+            b15err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a16=[]
 b16=[]
@@ -255,7 +255,7 @@ with open('./data/data-beta20-NK244-gammatauk','r') as csvfile:
             a16.append(float(row[1]))
             b16.append(float(row[5]))
             a16a.append(float(row[1])*beta20nk244)
-            b16err.append(float(row[5])*0.08)
+            b16err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a17=[]
 b17=[]
@@ -270,7 +270,7 @@ with open('./data/data-beta20-NK350-gammatauk','r') as csvfile:
             a17.append(float(row[1]))
             b17.append(float(row[5]))
             a17a.append(float(row[1])*beta20nk350)
-            b17err.append(float(row[5])*0.08)
+            b17err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a18=[]
 b18=[]
@@ -285,7 +285,7 @@ with open('./data/data-beta20-NK512-gammatauk','r') as csvfile:
             a18.append(float(row[1]))
             b18.append(float(row[5]))
             a18a.append(float(row[1])*beta20nk512)
-            b18err.append(float(row[5])*0.08)
+            b18err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a19=[]
 b19=[]
@@ -300,7 +300,7 @@ with open('./data/data-beta20-NK848-gammatauk','r') as csvfile:
             a19.append(float(row[1]))
             b19.append(float(row[5]))
             a19a.append(float(row[1])*beta20nk848)
-            b19err.append(float(row[5])*0.08)
+            b19err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a20=[]
 b20=[]
@@ -315,7 +315,7 @@ with open('./data/data-beta20-NK1500-gammatauk','r') as csvfile:
             a20.append(float(row[1]))
             b20.append(float(row[5]))
             a20a.append(float(row[1])*beta20nk1500)
-            b20err.append(float(row[5])*0.08)
+            b20err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a21=[]
 b21=[]
@@ -330,7 +330,7 @@ with open('./data/data-beta27-NK244-gammatauk','r') as csvfile:
             a21.append(float(row[1]))
             b21.append(float(row[5]))
             a21a.append(float(row[1])*beta27nk244)
-            b21err.append(float(row[5])*0.08)
+            b21err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a22=[]
 b22=[]
@@ -345,7 +345,7 @@ with open('./data/data-beta27-NK350-gammatauk','r') as csvfile:
             a22.append(float(row[1]))
             b22.append(float(row[5]))
             a22a.append(float(row[1])*beta27nk350)
-            b22err.append(float(row[5])*0.08)
+            b22err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a23=[]
 b23=[]
@@ -360,7 +360,7 @@ with open('./data/data-beta27-NK512-gammatauk','r') as csvfile:
             a23.append(float(row[1]))
             b23.append(float(row[5]))
             a23a.append(float(row[1])*beta27nk512)
-            b23err.append(float(row[5])*0.08)
+            b23err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a24=[]
 b24=[]
@@ -375,7 +375,7 @@ with open('./data/data-beta27-NK848-gammatauk','r') as csvfile:
             a24.append(float(row[1]))
             b24.append(float(row[5]))
             a24a.append(float(row[1])*beta27nk848)
-            b24err.append(float(row[5])*0.08)
+            b24err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 
 a25=[]
 b25=[]
@@ -390,7 +390,7 @@ with open('./data/data-beta27-NK1500-gammatauk','r') as csvfile:
             a25.append(float(row[1]))
             b25.append(float(row[5]))
             a25a.append(float(row[1])*beta27nk1500)
-            b25err.append(float(row[5])*0.08)
+            b25err.append(0.08*np.sqrt(1/(float(row[5]))**2))
 ######################################################################################
 ######################################################################################
 ######################################################################################
@@ -424,7 +424,7 @@ powerlaw = lambda x, amp, index: amp * (x**index)
 #################################################################################################
 loga1 = np.log(a1)
 logb1 = np.log(b1)
-logb1err = np.log10(b1err)
+logb1err = b1err #ya esta error propagado desde 0.08
 
 def model(x, a):
    return a + 0.33 * x
@@ -433,17 +433,17 @@ pars, cov = curve_fit(f=model, xdata=loga1, ydata=logb1, p0=[0], sigma=logb1err,
 
 stdevs1 = np.sqrt(np.diag(cov))
 
-amp1 = np.exp(pars[0])
+amp1 = (pars[0])
 
 print 'Linearizing data for beta=5 Nk=244'
-print 'prefactor=',amp1
-print 'stdevs prefactor=',np.exp(stdevs1[0])
-tauRtauK1=np.exp((np.log(amp1)-np.log(2))/0.33)
+print 'prefactor=',amp1,'stdevs prefactor=',(stdevs1[0])
+tauRtauK1=np.exp(((amp1)-np.log(2))/0.33)
+errtauRtauK1=3.0303*np.sqrt(np.exp(6.06061*(amp1-np.log(2)))*stdevs1[0]**2)
 #################################################################################################
 #################################################################################################
 loga2 = np.log(a2)
 logb2 = np.log(b2)
-logb2err = np.log10(b2err)
+logb2err = (b2err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -452,17 +452,17 @@ pars, cov = curve_fit(f=model, xdata=loga2, ydata=logb2, p0=[0], sigma=logb2err,
 
 stdevs2 = np.sqrt(np.diag(cov))
 
-amp2 = np.exp(pars[0])
+amp2 = (pars[0])
 
 print 'Linearizing data for beta=5 Nk=350'
-print 'prefactor=',amp2
-print 'stdevs prefactor=',np.exp(stdevs2[0])
-tauRtauK2=np.exp((np.log(amp2)-np.log(2))/0.33)
+print 'prefactor=',amp2,'stdevs prefactor=',(stdevs2[0])
+tauRtauK2=np.exp(((amp2)-np.log(2))/0.33)
+errtauRtauK2=3.0303*np.sqrt(np.exp(6.06061*(amp2-np.log(2)))*stdevs2[0]**2)
 #################################################################################################
 #################################################################################################
 loga3 = np.log(a3)
 logb3 = np.log(b3)
-logb3err = np.log10(b3err)
+logb3err = (b3err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -471,18 +471,17 @@ pars, cov = curve_fit(f=model, xdata=loga3, ydata=logb3, p0=[0], sigma=logb3err,
 
 stdevs3 = np.sqrt(np.diag(cov))
 
-amp3 = np.exp(pars[0])
+amp3 = (pars[0])
 
 print 'Linearizing data for beta=5 Nk=512'
-print 'prefactor=',amp3
-print 'stdevs prefactor=',np.exp(stdevs3[0])
-tauRtauK3=np.exp((np.log(amp3)-np.log(2))/0.33)
+print 'prefactor=',amp3,'stdevs prefactor=',(stdevs3[0])
+tauRtauK3=np.exp(((amp3)-np.log(2))/0.33)
+errtauRtauK3=3.0303*np.sqrt(np.exp(6.06061*(amp3-np.log(2)))*stdevs3[0]**2)
 #################################################################################################
-
 #################################################################################################
 loga4 = np.log(a4)
 logb4 = np.log(b4)
-logb4err = np.log10(b4err)
+logb4err = (b4err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -491,17 +490,17 @@ pars, cov = curve_fit(f=model, xdata=loga4, ydata=logb4, p0=[0], sigma=logb4err,
 
 stdevs4 = np.sqrt(np.diag(cov))
 
-amp4 = np.exp(pars[0])
+amp4 = (pars[0])
 
 print 'Linearizing data for beta=5 Nk=848'
-print 'prefactor=',amp4
-print 'stdevs prefactor=',np.exp(stdevs4[0])
-tauRtauK4=np.exp((np.log(amp4)-np.log(2))/0.33)
+print 'prefactor=',amp4,'stdevs prefactor=',(stdevs4[0])
+tauRtauK4=np.exp(((amp4)-np.log(2))/0.33)
+errtauRtauK4=3.0303*np.sqrt(np.exp(6.06061*(amp4-np.log(2)))*stdevs4[0]**2)
 #################################################################################################
 #################################################################################################
 loga5 = np.log(a5)
 logb5 = np.log(b5)
-logb5err = np.log10(b5err)
+logb5err = (b5err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -510,17 +509,17 @@ pars, cov = curve_fit(f=model, xdata=loga5, ydata=logb5, p0=[0], sigma=logb5err,
 
 stdevs5 = np.sqrt(np.diag(cov))
 
-amp5 = np.exp(pars[0])
+amp5 = (pars[0])
 
 print 'Linearizing data for beta=5 Nk=1500'
-print 'prefactor=',amp5
-print 'stdevs prefactor=',np.exp(stdevs5[0])
-tauRtauK5=np.exp((np.log(amp5)-np.log(2))/0.33)
+print 'prefactor=',amp5,'stdevs prefactor=',(stdevs5[0])
+tauRtauK5=np.exp(((amp5)-np.log(2))/0.33)
+errtauRtauK5=3.0303*np.sqrt(np.exp(6.06061*(amp5-np.log(2)))*stdevs5[0]**2)
 #################################################################################################
 #################################################################################################
 loga6 = np.log(a6)
 logb6 = np.log(b6)
-logb6err = np.log10(b6err)
+logb6err = (b6err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -529,17 +528,17 @@ pars, cov = curve_fit(f=model, xdata=loga6, ydata=logb6, p0=[0], sigma=logb6err,
 
 stdevs6 = np.sqrt(np.diag(cov))
 
-amp6 = np.exp(pars[0])
+amp6 = (pars[0])
 
 print 'Linearizing data for beta=9 Nk=244'
-print 'prefactor=',amp6
-print 'stdevs prefactor=',np.exp(stdevs6[0])
-tauRtauK6=np.exp((np.log(amp6)-np.log(2))/0.33)
+print 'prefactor=',amp6,'stdevs prefactor=',(stdevs6[0])
+tauRtauK6=np.exp(((amp6)-np.log(2))/0.33)
+errtauRtauK6=3.0303*np.sqrt(np.exp(6.06061*(amp6-np.log(2)))*stdevs6[0]**2)
 #################################################################################################
 #################################################################################################
 loga7 = np.log(a7)
 logb7 = np.log(b7)
-logb7err = np.log10(b7err)
+logb7err = (b7err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -548,17 +547,17 @@ pars, cov = curve_fit(f=model, xdata=loga7, ydata=logb7, p0=[0], sigma=logb7err,
 
 stdevs7 = np.sqrt(np.diag(cov))
 
-amp7 = np.exp(pars[0])
+amp7 = (pars[0])
 
 print 'Linearizing data for beta=9 Nk=350'
-print 'prefactor=',amp7
-print 'stdevs prefactor=',np.exp(stdevs7[0])
-tauRtauK7=np.exp((np.log(amp7)-np.log(2))/0.33)
+print 'prefactor=',amp7,'stdevs prefactor=',(stdevs7[0])
+tauRtauK7=np.exp(((amp7)-np.log(2))/0.33)
+errtauRtauK7=3.0303*np.sqrt(np.exp(6.06061*(amp7-np.log(2)))*stdevs7[0]**2)
 #################################################################################################
 #################################################################################################
 loga8 = np.log(a8)
 logb8 = np.log(b8)
-logb8err = np.log10(b8err)
+logb8err = (b8err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -567,18 +566,17 @@ pars, cov = curve_fit(f=model, xdata=loga8, ydata=logb8, p0=[0], sigma=logb8err,
 
 stdevs8 = np.sqrt(np.diag(cov))
 
-amp8 = np.exp(pars[0])
+amp8 = (pars[0])
 
 print 'Linearizing data for beta=9 Nk=512'
-print 'prefactor=',amp8
-print 'stdevs prefactor=',np.exp(stdevs8[0])
-tauRtauK8=np.exp((np.log(amp8)-np.log(2))/0.33)
+print 'prefactor=',amp8,'stdevs prefactor=',(stdevs8[0])
+tauRtauK8=np.exp(((amp8)-np.log(2))/0.33)
+errtauRtauK8=3.0303*np.sqrt(np.exp(6.06061*(amp8-np.log(2)))*stdevs8[0]**2)
 #################################################################################################
-
 #################################################################################################
 loga9 = np.log(a9)
 logb9 = np.log(b9)
-logb9err = np.log10(b9err)
+logb9err = (b9err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -587,17 +585,17 @@ pars, cov = curve_fit(f=model, xdata=loga9, ydata=logb9, p0=[0], sigma=logb9err,
 
 stdevs9 = np.sqrt(np.diag(cov))
 
-amp9 = np.exp(pars[0])
+amp9 = (pars[0])
 
 print 'Linearizing data for beta=9 Nk=848'
-print 'prefactor=',amp9
-print 'stdevs prefactor=',np.exp(stdevs9[0])
-tauRtauK9=np.exp((np.log(amp9)-np.log(2))/0.33)
+print 'prefactor=',amp9,'stdevs prefactor=',(stdevs9[0])
+tauRtauK9=np.exp(((amp9)-np.log(2))/0.33)
+errtauRtauK9=3.0303*np.sqrt(np.exp(6.06061*(amp9-np.log(2)))*stdevs9[0]**2)
 #################################################################################################
 #################################################################################################
 loga10 = np.log(a10)
 logb10 = np.log(b10)
-logb10err = np.log10(b10err)
+logb10err = (b10err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -606,17 +604,17 @@ pars, cov = curve_fit(f=model, xdata=loga10, ydata=logb10, p0=[0], sigma=logb10e
 
 stdevs10 = np.sqrt(np.diag(cov))
 
-amp10 = np.exp(pars[0])
+amp10 = (pars[0])
 
 print 'Linearizing data for beta=9 Nk=1500'
-print 'prefactor=',amp10
-print 'stdevs prefactor=',np.exp(stdevs10[0])
-tauRtauK10=np.exp((np.log(amp10)-np.log(2))/0.33)
+print 'prefactor=',amp10,'stdevs prefactor=',(stdevs10[0])
+tauRtauK10=np.exp(((amp10)-np.log(2))/0.33)
+errtauRtauK10=3.0303*np.sqrt(np.exp(6.06061*(amp10-np.log(2)))*stdevs10[0]**2)
 #################################################################################################
 #################################################################################################
 loga11 = np.log(a11)
 logb11 = np.log(b11)
-logb11err = np.log10(b11err)
+logb11err = (b11err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -625,17 +623,17 @@ pars, cov = curve_fit(f=model, xdata=loga11, ydata=logb11, p0=[0], sigma=logb11e
 
 stdevs11 = np.sqrt(np.diag(cov))
 
-amp11 = np.exp(pars[0])
+amp11 = (pars[0])
 
 print 'Linearizing data for beta=14 Nk=244'
-print 'prefactor=',amp11
-print 'stdevs prefactor=',np.exp(stdevs11[0])
-tauRtauK11=np.exp((np.log(amp11)-np.log(2))/0.33)
+print 'prefactor=',amp11,'stdevs prefactor=',(stdevs11[0])
+tauRtauK11=np.exp(((amp11)-np.log(2))/0.33)
+errtauRtauK11=3.0303*np.sqrt(np.exp(6.06061*(amp11-np.log(2)))*stdevs11[0]**2)
 #################################################################################################
 #################################################################################################
 loga12 = np.log(a12)
 logb12 = np.log(b12)
-logb12err = np.log10(b12err)
+logb12err = (b12err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -644,17 +642,17 @@ pars, cov = curve_fit(f=model, xdata=loga12, ydata=logb12, p0=[0], sigma=logb12e
 
 stdevs12 = np.sqrt(np.diag(cov))
 
-amp12 = np.exp(pars[0])
+amp12 = (pars[0])
 
 print 'Linearizing data for beta=14 Nk=350'
-print 'prefactor=',amp12
-print 'stdevs prefactor=',np.exp(stdevs12[0])
-tauRtauK12=np.exp((np.log(amp12)-np.log(2))/0.33)
+print 'prefactor=',amp12,'stdevs prefactor=',(stdevs12[0])
+tauRtauK12=np.exp(((amp12)-np.log(2))/0.33)
+errtauRtauK12=3.0303*np.sqrt(np.exp(6.06061*(amp12-np.log(2)))*stdevs12[0]**2)
 #################################################################################################
 #################################################################################################
 loga13 = np.log(a13)
 logb13 = np.log(b13)
-logb13err = np.log10(b13err)
+logb13err = (b13err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -663,18 +661,17 @@ pars, cov = curve_fit(f=model, xdata=loga13, ydata=logb13, p0=[0], sigma=logb13e
 
 stdevs13 = np.sqrt(np.diag(cov))
 
-amp13 = np.exp(pars[0])
+amp13 = (pars[0])
 
 print 'Linearizing data for beta=14 Nk=512'
-print 'prefactor=',amp13
-print 'stdevs prefactor=',np.exp(stdevs13[0])
-tauRtauK13=np.exp((np.log(amp13)-np.log(2))/0.33)
+print 'prefactor=',amp13,'stdevs prefactor=',(stdevs13[0])
+tauRtauK13=np.exp(((amp13)-np.log(2))/0.33)
+errtauRtauK13=3.0303*np.sqrt(np.exp(6.06061*(amp13-np.log(2)))*stdevs13[0]**2)
 #################################################################################################
-
 #################################################################################################
 loga14 = np.log(a14)
 logb14 = np.log(b14)
-logb14err = np.log10(b14err)
+logb14err = (b14err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -683,17 +680,17 @@ pars, cov = curve_fit(f=model, xdata=loga14, ydata=logb14, p0=[0], sigma=logb14e
 
 stdevs14 = np.sqrt(np.diag(cov))
 
-amp14 = np.exp(pars[0])
+amp14 = (pars[0])
 
 print 'Linearizing data for beta=14 Nk=848'
-print 'prefactor=',amp14
-print 'stdevs prefactor=',np.exp(stdevs14[0])
-tauRtauK14=np.exp((np.log(amp14)-np.log(2))/0.33)
+print 'prefactor=',amp14,'stdevs prefactor=',(stdevs14[0])
+tauRtauK14=np.exp(((amp14)-np.log(2))/0.33)
+errtauRtauK14=3.0303*np.sqrt(np.exp(6.06061*(amp14-np.log(2)))*stdevs14[0]**2)
 #################################################################################################
 #################################################################################################
 loga15 = np.log(a15)
 logb15 = np.log(b15)
-logb15err = np.log10(b15err)
+logb15err = (b15err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -702,17 +699,17 @@ pars, cov = curve_fit(f=model, xdata=loga15, ydata=logb15, p0=[0], sigma=logb15e
 
 stdevs15 = np.sqrt(np.diag(cov))
 
-amp15 = np.exp(pars[0])
+amp15 = (pars[0])
 
 print 'Linearizing data for beta=14 Nk=1500'
-print 'prefactor=',amp15
-print 'stdevs prefactor=',np.exp(stdevs15[0])
-tauRtauK15=np.exp((np.log(amp15)-np.log(2))/0.33)
+print 'prefactor=',amp15,'stdevs prefactor=',(stdevs15[0])
+tauRtauK15=np.exp(((amp15)-np.log(2))/0.33)
+errtauRtauK15=3.0303*np.sqrt(np.exp(6.06061*(amp15-np.log(2)))*stdevs15[0]**2)
 #################################################################################################
 #################################################################################################
 loga16 = np.log(a16)
 logb16 = np.log(b16)
-logb16err = np.log10(b16err)
+logb16err = (b16err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -721,17 +718,17 @@ pars, cov = curve_fit(f=model, xdata=loga16, ydata=logb16, p0=[0], sigma=logb16e
 
 stdevs16 = np.sqrt(np.diag(cov))
 
-amp16 = np.exp(pars[0])
+amp16 = (pars[0])
 
 print 'Linearizing data for beta=20 Nk=244'
-print 'prefactor=',amp16
-print 'stdevs prefactor=',np.exp(stdevs16[0])
-tauRtauK16=np.exp((np.log(amp16)-np.log(2))/0.33)
+print 'prefactor=',amp16,'stdevs prefactor=',(stdevs16[0])
+tauRtauK16=np.exp(((amp16)-np.log(2))/0.33)
+errtauRtauK16=3.0303*np.sqrt(np.exp(6.06061*(amp16-np.log(2)))*stdevs16[0]**2)
 #################################################################################################
 #################################################################################################
 loga17 = np.log(a17)
 logb17 = np.log(b17)
-logb17err = np.log10(b17err)
+logb17err = (b17err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -740,17 +737,17 @@ pars, cov = curve_fit(f=model, xdata=loga17, ydata=logb17, p0=[0], sigma=logb17e
 
 stdevs17 = np.sqrt(np.diag(cov))
 
-amp17 = np.exp(pars[0])
+amp17 = (pars[0])
 
 print 'Linearizing data for beta=20 Nk=350'
-print 'prefactor=',amp17
-print 'stdevs prefactor=',np.exp(stdevs17[0])
-tauRtauK17=np.exp((np.log(amp17)-np.log(2))/0.33)
+print 'prefactor=',amp17,'stdevs prefactor=',(stdevs17[0])
+tauRtauK17=np.exp(((amp17)-np.log(2))/0.33)
+errtauRtauK17=3.0303*np.sqrt(np.exp(6.06061*(amp17-np.log(2)))*stdevs17[0]**2)
 #################################################################################################
 #################################################################################################
 loga18 = np.log(a18)
 logb18 = np.log(b18)
-logb18err = np.log10(b18err)
+logb18err = (b18err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -759,18 +756,17 @@ pars, cov = curve_fit(f=model, xdata=loga18, ydata=logb18, p0=[0], sigma=logb18e
 
 stdevs18 = np.sqrt(np.diag(cov))
 
-amp18 = np.exp(pars[0])
+amp18 = (pars[0])
 
 print 'Linearizing data for beta=20 Nk=512'
-print 'prefactor=',amp18
-print 'stdevs prefactor=',np.exp(stdevs18[0])
-tauRtauK18=np.exp((np.log(amp18)-np.log(2))/0.33)
+print 'prefactor=',amp18,'stdevs prefactor=',(stdevs18[0])
+tauRtauK18=np.exp(((amp18)-np.log(2))/0.33)
+errtauRtauK18=3.0303*np.sqrt(np.exp(6.06061*(amp18-np.log(2)))*stdevs18[0]**2)
 #################################################################################################
-
 #################################################################################################
 loga19 = np.log(a19)
 logb19 = np.log(b19)
-logb19err = np.log10(b19err)
+logb19err = (b19err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -779,17 +775,17 @@ pars, cov = curve_fit(f=model, xdata=loga19, ydata=logb19, p0=[0], sigma=logb19e
 
 stdevs19 = np.sqrt(np.diag(cov))
 
-amp19 = np.exp(pars[0])
+amp19 = (pars[0])
 
 print 'Linearizing data for beta=20 Nk=848'
-print 'prefactor=',amp19
-print 'stdevs prefactor=',np.exp(stdevs19[0])
-tauRtauK19=np.exp((np.log(amp19)-np.log(2))/0.33)
+print 'prefactor=',amp19,'stdevs prefactor=',(stdevs19[0])
+tauRtauK19=np.exp(((amp19)-np.log(2))/0.33)
+errtauRtauK19=3.0303*np.sqrt(np.exp(6.06061*(amp19-np.log(2)))*stdevs19[0]**2)
 #################################################################################################
 #################################################################################################
 loga20 = np.log(a20)
 logb20 = np.log(b20)
-logb20err = np.log10(b20err)
+logb20err = (b20err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -798,17 +794,17 @@ pars, cov = curve_fit(f=model, xdata=loga20, ydata=logb20, p0=[0], sigma=logb20e
 
 stdevs20 = np.sqrt(np.diag(cov))
 
-amp20 = np.exp(pars[0])
+amp20 = (pars[0])
 
 print 'Linearizing data for beta=20 Nk=1500'
-print 'prefactor=',amp20
-print 'stdevs prefactor=',np.exp(stdevs20[0])
-tauRtauK20=np.exp((np.log(amp20)-np.log(2))/0.33)
+print 'prefactor=',amp20,'stdevs prefactor=',(stdevs20[0])
+tauRtauK20=np.exp(((amp20)-np.log(2))/0.33)
+errtauRtauK20=3.0303*np.sqrt(np.exp(6.06061*(amp20-np.log(2)))*stdevs20[0]**2)
 #################################################################################################
 #################################################################################################
 loga21 = np.log(a21)
 logb21 = np.log(b21)
-logb21err = np.log10(b21err)
+logb21err = (b21err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -817,17 +813,17 @@ pars, cov = curve_fit(f=model, xdata=loga21, ydata=logb21, p0=[0], sigma=logb21e
 
 stdevs21 = np.sqrt(np.diag(cov))
 
-amp21 = np.exp(pars[0])
+amp21 = (pars[0])
 
 print 'Linearizing data for beta=27 Nk=244'
-print 'prefactor=',amp21
-print 'stdevs prefactor=',np.exp(stdevs21[0])
-tauRtauK21=np.exp((np.log(amp21)-np.log(2))/0.33)
+print 'prefactor=',amp21,'stdevs prefactor=',(stdevs21[0])
+tauRtauK21=np.exp(((amp21)-np.log(2))/0.33)
+errtauRtauK21=3.0303*np.sqrt(np.exp(6.06061*(amp21-np.log(2)))*stdevs21[0]**2)
 #################################################################################################
 #################################################################################################
 loga22 = np.log(a22)
 logb22 = np.log(b22)
-logb22err = np.log10(b22err)
+logb22err = (b22err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -836,17 +832,17 @@ pars, cov = curve_fit(f=model, xdata=loga22, ydata=logb22, p0=[0], sigma=logb22e
 
 stdevs22 = np.sqrt(np.diag(cov))
 
-amp22 = np.exp(pars[0])
+amp22 = (pars[0])
 
 print 'Linearizing data for beta=27 Nk=350'
-print 'prefactor=',amp22
-print 'stdevs prefactor=',np.exp(stdevs22[0])
-tauRtauK22=np.exp((np.log(amp22)-np.log(2))/0.33)
+print 'prefactor=',amp22,'stdevs prefactor=',(stdevs22[0])
+tauRtauK22=np.exp(((amp22)-np.log(2))/0.33)
+errtauRtauK22=3.0303*np.sqrt(np.exp(6.06061*(amp22-np.log(2)))*stdevs22[0]**2)
 #################################################################################################
 #################################################################################################
 loga23 = np.log(a23)
 logb23 = np.log(b23)
-logb23err = np.log10(b23err)
+logb23err = (b23err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -855,18 +851,17 @@ pars, cov = curve_fit(f=model, xdata=loga23, ydata=logb23, p0=[0], sigma=logb23e
 
 stdevs23 = np.sqrt(np.diag(cov))
 
-amp23 = np.exp(pars[0])
+amp23 = (pars[0])
 
 print 'Linearizing data for beta=27 Nk=512'
-print 'prefactor=',amp23
-print 'stdevs prefactor=',np.exp(stdevs23[0])
-tauRtauK23=np.exp((np.log(amp23)-np.log(2))/0.33)
+print 'prefactor=',amp23,'stdevs prefactor=',(stdevs23[0])
+tauRtauK23=np.exp(((amp23)-np.log(2))/0.33)
+errtauRtauK23=3.0303*np.sqrt(np.exp(6.06061*(amp23-np.log(2)))*stdevs23[0]**2)
 #################################################################################################
-
 #################################################################################################
 loga24 = np.log(a24)
 logb24 = np.log(b24)
-logb24err = np.log10(b24err)
+logb24err = (b24err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -875,17 +870,17 @@ pars, cov = curve_fit(f=model, xdata=loga24, ydata=logb24, p0=[0], sigma=logb24e
 
 stdevs24 = np.sqrt(np.diag(cov))
 
-amp24 = np.exp(pars[0])
+amp24 = (pars[0])
 
 print 'Linearizing data for beta=27 Nk=848'
-print 'prefactor=',amp24
-print 'stdevs prefactor=',np.exp(stdevs24[0])
-tauRtauK24=np.exp((np.log(amp24)-np.log(2))/0.33)
+print 'prefactor=',amp24,'stdevs prefactor=',(stdevs24[0])
+tauRtauK24=np.exp(((amp24)-np.log(2))/0.33)
+errtauRtauK24=3.0303*np.sqrt(np.exp(6.06061*(amp24-np.log(2)))*stdevs24[0]**2)
 #################################################################################################
 #################################################################################################
 loga25 = np.log(a25)
 logb25 = np.log(b25)
-logb25err = np.log10(b25err)
+logb25err = (b25err)
 
 def model(x, a):
    return a + 0.33 * x
@@ -894,12 +889,40 @@ pars, cov = curve_fit(f=model, xdata=loga25, ydata=logb25, p0=[0], sigma=logb25e
 
 stdevs25 = np.sqrt(np.diag(cov))
 
-amp25 = np.exp(pars[0])
+amp25 = (pars[0])
 
 print 'Linearizing data for beta=27 Nk=1500'
-print 'prefactor=',amp25
-print 'stdevs prefactor=',np.exp(stdevs25[0])
-tauRtauK25=np.exp((np.log(amp25)-np.log(2))/0.33)
+print 'prefactor=',amp25,'stdevs prefactor=',(stdevs25[0])
+tauRtauK25=np.exp(((amp25)-np.log(2))/0.33)
+errtauRtauK25=3.0303*np.sqrt(np.exp(6.06061*(amp25-np.log(2)))*stdevs25[0]**2)
+#################################################################################################
+print '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+print 'tauRtauK=', tauRtauK1,'error=', errtauRtauK1
+print 'tauRtauK=', tauRtauK2,'error=', errtauRtauK2
+print 'tauRtauK=', tauRtauK3,'error=', errtauRtauK3
+print 'tauRtauK=', tauRtauK4,'error=', errtauRtauK4
+print 'tauRtauK=', tauRtauK5,'error=', errtauRtauK5
+print 'tauRtauK=', tauRtauK6,'error=', errtauRtauK6
+print 'tauRtauK=', tauRtauK7,'error=', errtauRtauK7
+print 'tauRtauK=', tauRtauK8,'error=', errtauRtauK8
+print 'tauRtauK=', tauRtauK9,'error=', errtauRtauK9
+print 'tauRtauK=', tauRtauK10,'error=', errtauRtauK10
+print 'tauRtauK=', tauRtauK11,'error=', errtauRtauK11
+print 'tauRtauK=', tauRtauK12,'error=', errtauRtauK12
+print 'tauRtauK=', tauRtauK13,'error=', errtauRtauK13
+print 'tauRtauK=', tauRtauK14,'error=', errtauRtauK14
+print 'tauRtauK=', tauRtauK15,'error=', errtauRtauK15
+print 'tauRtauK=', tauRtauK16,'error=', errtauRtauK16
+print 'tauRtauK=', tauRtauK17,'error=', errtauRtauK17
+print 'tauRtauK=', tauRtauK18,'error=', errtauRtauK18
+print 'tauRtauK=', tauRtauK19,'error=', errtauRtauK19
+print 'tauRtauK=', tauRtauK20,'error=', errtauRtauK20
+print 'tauRtauK=', tauRtauK21,'error=', errtauRtauK21
+print 'tauRtauK=', tauRtauK22,'error=', errtauRtauK22
+print 'tauRtauK=', tauRtauK23,'error=', errtauRtauK23
+print 'tauRtauK=', tauRtauK24,'error=', errtauRtauK24
+print 'tauRtauK=', tauRtauK25,'error=', errtauRtauK25
+
 #################################################################################################
 
 def multiply_list(a,b):
