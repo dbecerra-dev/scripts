@@ -1,0 +1,21 @@
+1. Supongo error de 0.08 en gammamax, propago error a log(gammamax) para usarlo en los fits log log, obtengo un error de entre %2 y %2,4 aproximadamente
+para valores de tauR/tauK (esto lo obtuve mediante el procedimiento sistematico de lo que redacto en pdf, sin embargo esto debe tener los mismos errores
+que cuando se usa simplemente un shift factor, ya que hay que hay que ir interpretando los puntos de datos para que colapsen por sus zonas de transicion,
+por esta razon creo es correcto usar los tauR/tauK que teniamos del paper pasado y suponerles un error de 2% a cada uno)
+
+2. Procedo a hacer fits de tauR/tauK vs beta (python 3.fit.py) con los errores de tauR/tauK de %2 los cuales propago a log(tauR/tauK).
+Obtengo entonces errores para prefactor y exponente para cada NK (los errores del prefactor estan propagados). Agrego igual las barras de error de cada punto
+(fit.eps)
+
+3. Hago ajuste para prefactor y exponente vs NK (python 4.prefactorexp_nk.py). Propago los errores de prefactor (ajuste log log)
+ y obtengo parametros y errores para prefactor y exponente (el error de prefactor lo propago).
+ Agrego barras de error a cada punto en prefactorexp-nk.
+
+4. obtengo expresion pra tauR bastante parecida a la anterior y su expresion en CFSM (5.CFSMexpr.nb)
+
+5. en 1.stress_overshoot y 2.stress_overshootcfsm muestro el uso de expresions nuevas y sus colapsos.
+
+6. La expresion de CFSM es bastante parecida a la anterior y si simplifico en la forma aZ^2, la anterior con a=502 funciona mejor que
+lade ahora con un a un poco mas bajo (quizas mantener la expresion 0.502Z^2)
+
+La prepagacion de errores esta en 2.plusminus.nb
