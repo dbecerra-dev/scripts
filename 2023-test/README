@@ -1,0 +1,12 @@
+## Impact of Molecular-level Structural Disruption on Relaxation Dynamics of Polymers with End-on and Side-on Liquid Crystal Moieties
+### To view this publication, click [here](https://pubs.acs.org/doi/10.1021/acsnano.3c05354)
+
+scripts:
+
+    initial_configurations/
+
+        lammps_input/
+
+            - [sclcp-rand.in](https://github.com/hall-polymers/published-work) - LAMMPS input script for the production run of the SCLCPs with
+            random sequences of end-on and side-on LC moieties.
+            This script calculates MSD and G(t)
